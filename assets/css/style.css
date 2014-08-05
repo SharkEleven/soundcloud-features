@@ -1,0 +1,19 @@
+body {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+}
+
+.center-block {
+  max-width: 1160px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.center {
+  width: 800px;
+  height: 400px;
+  background-color: #51534a;
+  border: solid 1px #bbbab0;
+  display: inline-block;
+}
