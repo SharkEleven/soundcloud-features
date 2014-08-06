@@ -1,9 +1,18 @@
 var http = require("http");
 var url = require("url");
+var express = require('express');
+
+var app = express();
+app.set('view engine', 'ejs');
+
+app.get( '/', function( request, response) {
+
+	response.render( 'pages/index');
+
+} );
+
 
 function onRequest( request, response ) {
-
-  console.log("Request received.");
 
   	
 	var pathname = url.parse(request.url).pathname;
@@ -19,6 +28,6 @@ function onRequest( request, response ) {
 
 }
 
-http.createServer( onRequest ).listen(8888);
+http.createServer( app ).listen(8888);
 
 console.log("Server has started.");
